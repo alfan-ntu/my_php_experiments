@@ -7,11 +7,12 @@
   <body>
     <h1>Tad deserts bar</h1>
     <?php
-//
 // The following statement shows how a variable is used
-//
       $shopName = "Al's Cafe";
-      echo "Welcome to $shopName ";
+// The following statement shows how to get an external variable
+// the URL should be changed to http://..../demo0302.php?user_name=xxxxx
+// to pass the variable into this php
+      echo "Welcome {$_GET['user_name']} to $shopName ";
       echo "Time now ", date("Y-m-d H:i:s");
       phpinfo();
     ?>
