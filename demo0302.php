@@ -10,6 +10,7 @@
 //
 // The following statement shows how a variable is used
 //
+      $shopName = "Al's Cafe";
       echo "Welcome to $shopName ";
       echo "Time now ", date("Y-m-d H:i:s");
       phpinfo();
