@@ -16,18 +16,32 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <!-- This demos how a form is created -->
-  	<form class="form" action="index.php" method="post">
-  		Account : 
-      <input type="text" placeholder="Your Account" name="user_name" value=""> <br>
-      <button type="submit" name="button">Submit</button>
-  	</form>
-    <!-- This demonstrates how a php section is inserted and how a variable -->
-    <!-- input from a form is retrieved -->
-    <?php
-      if (isset($_POST['user_name'])) {
-        echo "Hello! {$_POST['user_name']} Welcome to Al's Cafeteria";
-      }
-    ?> 
+      <!-- Start using bootstrap to arrange the dispaly -->
+      <div class="container">
+        <div id="site_banner">
+          <a href="index.php">
+            <img src="images/title.jpg" alt="My PHP Experiemtns" class="img-responsibe">
+          </a>
+        </div>
+
+        <div id="site_content" class="row">
+          <div class="col-md-9 col-sm-8">Main Content</div>
+          <div class="col-md-3 col-sm-4">
+            <!-- This demos how a form is created -->
+            <form class="form" action="index.php" method="post">
+              Account : 
+              <input type="text" placeholder="Your Account" name="user_name" value=""> <br>
+              <button type="submit" name="button">Submit</button>
+            </form>
+            <!-- This demonstrates how a php section is inserted and how a variable -->
+            <!-- input from a form is retrieved -->
+            <?php
+              if (isset($_POST['user_name'])) {
+                echo "Hello! {$_POST['user_name']} Welcome to Al's Cafeteria";
+              }
+            ?> 
+          </div>
+        </div>
+    </div>
   </body>
  </html>
