@@ -22,5 +22,12 @@
       <input type="text" placeholder="Your Account" name="user_name" value=""> <br>
       <button type="submit" name="button">Submit</button>
   	</form>
+    <!-- This demonstrates how a php section is inserted and how a variable -->
+    <!-- input from a form is retrieved -->
+    <?php
+      if (isset($_POST['user_name'])) {
+        echo "Hello! {$_POST['user_name']} Welcome to Al's Cafeteria";
+      }
+    ?> 
   </body>
  </html>
