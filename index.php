@@ -17,14 +17,16 @@
   </head>
   <body>
       <!-- Start using bootstrap to arrange the dispaly -->
+      <!-- The class name matches to the class picker name in .css file -->
       <div class="container">
-        <div id="site_banner">
+        <!-- the id name has to match to that in .css file -->
+        <div id="shop_head">
           <a href="index.php">
-            <img src="images/title.jpg" alt="My PHP Experiemtns" class="img-responsibe">
+            <img src="images/title.jpg" alt="My PHP Experiemtns" class="img-responsive">
           </a>
         </div>
-
-        <div id="site_content" class="row">
+        <!-- the id name has to match to that in .css file -->
+        <div id="shop_main" class="row">
           <div class="col-md-9 col-sm-8">Main Content</div>
           <div class="col-md-3 col-sm-4">
             <!-- This demos how a form is created -->
