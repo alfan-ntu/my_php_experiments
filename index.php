@@ -50,8 +50,9 @@
                 <!-- This demonstrates how a php section is inserted and how a variable -->
                 <!-- input from a form is retrieved -->
                 <?php
+                  require_once 'config.php';
                   if (isset($_POST['user_name'])) {
-                    echo "Hello! {$_POST['user_name']} Welcome to Al's Cafeteria";
+                    echo "Hello! {$_POST['user_name']} Welcome to " . _SHOP_NAME;
                   }
                 ?> 
               </div> <!-- panel-body -->              
