@@ -29,21 +29,42 @@
         <div id="shop_main" class="row">
           <div class="col-md-9 col-sm-8">Main Content</div>
           <div class="col-md-3 col-sm-4">
-            <!-- This demos how a form is created -->
-            <form class="form" action="index.php" method="post">
-              Account : 
-              <input type="text" placeholder="Your Account" name="user_name" value=""> <br>
-              <button type="submit" name="button">Submit</button>
-            </form>
-            <!-- This demonstrates how a php section is inserted and how a variable -->
-            <!-- input from a form is retrieved -->
-            <?php
-              if (isset($_POST['user_name'])) {
-                echo "Hello! {$_POST['user_name']} Welcome to Al's Cafeteria";
-              }
-            ?> 
-          </div>
-        </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">Login</div>
+              <div class="panel-body">
+                <form role="form" class="form-horizontal" action="index.php" method="post">
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Account</label> 
+                    <div class="col-md-8">
+                      <input type="text" placeholder="account name" name="user_name" value="" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4"></label>
+                    <div class="col-md-8">
+                      <button type="submit" name="button" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- This demonstrates how a php section is inserted and how a variable -->
+                <!-- input from a form is retrieved -->
+                <?php
+                  if (isset($_POST['user_name'])) {
+                    echo "Hello! {$_POST['user_name']} Welcome to Al's Cafeteria";
+                  }
+                ?> 
+              </div> <!-- panel-body -->              
+            </div> <!-- panel panel-primary -->
+          </div> <!-- class="col-md-3 col-sm-4" -->
+        </div> <!-- shop_main -->
+
+        <div id="shop_foot">
+          <div>Address : xxxxxxx, Taipei, Taiwan</div>
+          <div>Telephone : 02-23456789</div>
+          <div>copyright © 2016 All Rights Reserved.</div>
+        </div>  
+
     </div>
   </body>
  </html>
