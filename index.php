@@ -54,6 +54,9 @@
                   if (isset($_POST['user_name'])) {
                     echo "Hello! {$_POST['user_name']} Welcome to " . _SHOP_NAME;
                   }
+                  // demo how a command can be executed from within a php code
+                  $output = `dir /w`;
+                  echo "<pre>$output</pre>";
                 ?> 
               </div> <!-- panel-body -->              
             </div> <!-- panel panel-primary -->
