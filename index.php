@@ -29,18 +29,34 @@
         <div id="shop_main" class="row">
           <div class="col-md-9 col-sm-8">
               <?php 
-                $var = "Al's Cafeteria";
-                $type = "string";
-                if ($type == 'string') {
+              /* demonstrates how filter_var is used
+                $var = "maoyi.fan@aegiscloud.com.tw";
+                $type = "email";
+                if ($type == "string") {
                   $var = isset($var) ? filter_var($var, FILTER_SANITIZE_MAGIC_QUOTES) : '';
-                } elseif ($type == 'url') {
+                } elseif ($type == "url") {
                   $var = isset($var) ? filter_var($var, FILTER_VALIDATE_URL) : '';
-                } elseif ($type == 'email') {
+                } elseif ($type == "email") {
                   $var = isset($var) ? filter_var($var, FILTER_VALIDATE_EMAIL) : '';
                 } else {
                   $var = isset($var) ? filter_var($var, FILTER_SANITIZE_NUMBER_INT) : '';
                 }
                 echo $var;
+                */
+
+                /* 
+                  Demonstrates how 'foreach' is used
+                */
+                $_POST['goods_title'] = "croissant";
+                $_POST['goods_content'] = "This is a French style bread in Al's Cafeteria";
+                $_POST['goods_price'] = 100;
+                $_POST['goods_sn'] = 1;
+
+                foreach ($_POST as $key => $val) {
+                  $$key = filter_var($val, FILTER_SANITIZE_MAGIC_QUOTES);
+                  echo "{$key} = {$$key}<br>";
+                }
+
               ?>
           </div>
           <div class="col-md-3 col-sm-4">
