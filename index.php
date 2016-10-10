@@ -27,7 +27,22 @@
         </div>
         <!-- the id name has to match to that in .css file -->
         <div id="shop_main" class="row">
-          <div class="col-md-9 col-sm-8">Main Content</div>
+          <div class="col-md-9 col-sm-8">
+              <?php 
+                $var = "Al's Cafeteria";
+                $type = "string";
+                if ($type == 'string') {
+                  $var = isset($var) ? filter_var($var, FILTER_SANITIZE_MAGIC_QUOTES) : '';
+                } elseif ($type == 'url') {
+                  $var = isset($var) ? filter_var($var, FILTER_VALIDATE_URL) : '';
+                } elseif ($type == 'email') {
+                  $var = isset($var) ? filter_var($var, FILTER_VALIDATE_EMAIL) : '';
+                } else {
+                  $var = isset($var) ? filter_var($var, FILTER_SANITIZE_NUMBER_INT) : '';
+                }
+                echo $var;
+              ?>
+          </div>
           <div class="col-md-3 col-sm-4">
             <div class="panel panel-primary">
               <div class="panel-heading">Login</div>
